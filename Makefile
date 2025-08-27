@@ -160,3 +160,5 @@ backup-db: ## 💾 Hacer backup de la base de datos
 	@echo "$(YELLOW)Creando backup de la base de datos...$(NC)"
 	$(DOCKER_COMPOSE) exec $(DB_CONTAINER) mysqldump -u laravel -p laravel > backup_$(shell date +%Y%m%d_%H%M%S).sql
 	@echo "$(GREEN)✅ Backup creado!$(NC)"
+
+
