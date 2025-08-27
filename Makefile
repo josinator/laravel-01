@@ -5,8 +5,8 @@
 # Variables
 DOCKER_COMPOSE = docker-compose
 PHP_CONTAINER = app
-DB_CONTAINER = laravel-db
-REDIS_CONTAINER = laravel-redis
+DB_CONTAINER = db
+REDIS_CONTAINER = redis
 
 # Colores para output
 GREEN = \033[0;32m
@@ -67,11 +67,11 @@ shell: ## 🔧 Acceder al contenedor PHP (bash)
 	@echo "$(YELLOW)Accediendo al contenedor PHP...$(NC)"
 	$(DOCKER_COMPOSE) exec $(PHP_CONTAINER) bash
 
-shell-db: ## 🗄️ Acceder a MySQL (cliente mysql)
+db: ## 🗄️ Acceder a MySQL (cliente mysql)
 	@echo "$(YELLOW)Accediendo a MySQL...$(NC)"
 	$(DOCKER_COMPOSE) exec $(DB_CONTAINER) mysql -u laravel -p laravel
 
-shell-redis: ## 🔴 Acceder a Redis (redis-cli)
+redis: ## 🔴 Acceder a Redis (redis-cli)
 	@echo "$(YELLOW)Accediendo a Redis...$(NC)"
 	$(DOCKER_COMPOSE) exec $(REDIS_CONTAINER) redis-cli
 
