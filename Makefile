@@ -4,7 +4,7 @@
 
 # Variables
 DOCKER_COMPOSE = docker-compose
-PHP_CONTAINER = laravel-app
+PHP_CONTAINER = app
 DB_CONTAINER = laravel-db
 REDIS_CONTAINER = laravel-redis
 
